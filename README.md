@@ -71,6 +71,8 @@ mvn clean install package -DskipTests -Dfast -Pskip-webui-build -T 1C -Dscala.ve
 
 The key is `-Dscala.version=2.12.15` to ensure that the flink-scala code is built with a Java 17-compatible compiler. Once the `flink-scala_2.12-1.18.1.jar` inside the container has been replaced with the rebuilt one, the test job runs successfully just as it does under Java 11.
 
+A fixed version of this jar file has been included under `artifacts/`.
+
 ### Starting a Flink session cluster on Java 11
 For the job manager:
 
